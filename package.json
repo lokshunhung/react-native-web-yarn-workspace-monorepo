@@ -22,6 +22,7 @@
         "postinstall": "yarn patch-package"
     },
     "devDependencies": {
+        "@types/webpack": "4.41.21",
         "patch-package": "6.2.2",
         "postinstall-postinstall": "2.1.0",
         "prettier": "2.0.5"
