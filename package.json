@@ -17,9 +17,16 @@
         ]
     },
     "scripts": {
-        "format": "prettier --write '**/*.{js,json,jsx,ts,tsx}'"
+        "format": "prettier --write '**/*.{js,json,jsx,ts,tsx}'",
+        "patch-package": "patch-package --patch-dir patches",
+        "postinstall": "yarn patch-package"
     },
     "devDependencies": {
+        "patch-package": "6.2.2",
+        "postinstall-postinstall": "2.1.0",
         "prettier": "2.0.5"
+    },
+    "resolutions": {
+        "eslint": "7.5.0"
     }
 }

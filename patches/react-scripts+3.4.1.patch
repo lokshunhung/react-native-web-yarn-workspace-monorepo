@@ -1,0 +1,15 @@
+diff --git a/node_modules/react-scripts/scripts/utils/verifyPackageTree.js b/node_modules/react-scripts/scripts/utils/verifyPackageTree.js
+index 210043f..07baffe 100644
+--- a/node_modules/react-scripts/scripts/utils/verifyPackageTree.js
++++ b/node_modules/react-scripts/scripts/utils/verifyPackageTree.js
+@@ -17,6 +17,10 @@ const path = require('path');
+ // in the tree will likely break your setup.
+ // This is a relatively low-effort way to find common issues.
+ function verifyPackageTree() {
++
++  console.warn("\n" + chalk.black.bgYellow(" WARNING ") + " " + chalk.red("[react-scripts]: verifyPackageTree() skipped due to patch-package patch, to re-enable this behaviour after update, use SKIP_PREFLIGHT_CHECK=true") + "\n");
++  return;
++
+   const depsToCheck = [
+     // These are packages most likely to break in practice.
+     // See https://github.com/facebook/create-react-app/issues/1795 for reasons why.
