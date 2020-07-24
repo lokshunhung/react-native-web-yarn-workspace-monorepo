@@ -1,0 +1,25 @@
+{
+    "name": "@lsh/ws",
+    "author": "LS Hung <61226932+lokshunhung@users.noreply.github.com>",
+    "version": "0.0.1",
+    "license": "MIT",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "apps/*",
+            "libs/*"
+        ],
+        "nohoist": [
+            "**/@react-native-community/**",
+            "**/jetifier",
+            "**/react-native",
+            "**/react-native/**"
+        ]
+    },
+    "scripts": {
+        "format": "prettier --write '**/*.{js,json,jsx,ts,tsx}'"
+    },
+    "devDependencies": {
+        "prettier": "2.0.5"
+    }
+}
