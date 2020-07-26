@@ -23,6 +23,23 @@ const writeConfigSync = (name, config) =>
  */
 exports.webpack = (config, env) => {
     shouldWriteConfig && writeConfigSync('config-webpack', config);
+
+    const corePackagePath = path.join(__dirname, '..', '..', 'libs', 'core');
+
+    // ESLint
+    const eslintRule = config.module.rules[1];
+    if (!`${eslintRule.use[0].loader}`.includes(path.sep + 'eslint-loader' + path.sep)) {
+        throw new Error('[config-overrides] webpack(): Cannot find ESLint Loader');
+    }
+    eslintRule.include = [eslintRule.include, corePackagePath];
+
+    // Babel
+    const babelRule = config.module.rules[2].oneOf[1];
+    if (!`${babelRule.loader}`.includes(path.sep + 'babel-loader' + path.sep)) {
+        throw new Error('[config-overrides] webpack(): Cannot find Babel Loader');
+    }
+    babelRule.include = [babelRule.include, corePackagePath];
+
     return config;
 };
 
