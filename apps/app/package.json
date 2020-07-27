@@ -19,6 +19,7 @@
         "@types/react-test-renderer": "16.9.2",
         "babel-jest": "26.1.0",
         "metro-react-native-babel-preset": "0.61.0",
+        "react-native-testing-library": "2.1.1",
         "react-test-renderer": "16.13.1"
     },
     "eslintConfig": {
