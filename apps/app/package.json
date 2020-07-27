@@ -36,6 +36,14 @@
             "jsx",
             "json",
             "node"
-        ]
+        ],
+        "haste": {
+            "defaultPlatform": "android",
+            "platforms": [
+                "android",
+                "ios",
+                "native"
+            ]
+        }
     }
 }

@@ -1,12 +1,11 @@
-import 'react-native';
 import { App } from '@lsh/core/src/App';
 import React from 'react';
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+import { render } from 'react-native-testing-library';
 
 describe('App', () => {
     test('renders correctly', () => {
-        expect.assertions(0);
-        renderer.create(<App />);
+        expect.assertions(1);
+        const { getByText } = render(<App />);
+        expect(getByText(/^RN Android$/)).toBeTruthy();
     });
 });
