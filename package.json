@@ -12,15 +12,32 @@
     },
     "scripts": {
         "clean": "rm -rf apps/*/node_modules && rm -rf libs/*/node_modules && rm -rf node_modules && (watchman watch-del-all 2>/dev/null || echo 'watchman not installed, skipping')",
+        "app:native": "jetify && cd apps/app/ios && pod install && cd ../android && ./gradlew clean",
+        "app:android": "yarn workspace @lsh/app run android",
+        "app:ios": "yarn workspace @lsh/app run ios",
+        "app:start": "yarn workspace @lsh/app run start",
+        "web:start": "yarn workspace @lsh/web run start",
         "format": "prettier --write '**/*.{js,json,jsx,ts,tsx}'",
         "patch-package": "patch-package --patch-dir patches",
         "postinstall": "yarn patch-package"
     },
     "devDependencies": {
+        "@babel/core": "7.10.5",
+        "@babel/runtime": "7.10.5",
+        "@types/jest": "26.0.7",
+        "@types/node": "14.0.25",
+        "@types/react": "16.9.43",
+        "@types/react-native": "0.63.2",
         "@types/webpack": "4.41.21",
+        "@typescript-eslint/eslint-plugin": "3.7.0",
+        "@typescript-eslint/parser": "3.7.0",
+        "eslint": "7.5.0",
+        "jest": "26.1.0",
+        "jetifier": "1.6.6",
         "patch-package": "6.2.2",
         "postinstall-postinstall": "2.1.0",
-        "prettier": "2.0.5"
+        "prettier": "2.0.5",
+        "typescript": "3.9.7"
     },
     "resolutions": {
         "eslint": "7.5.0"
