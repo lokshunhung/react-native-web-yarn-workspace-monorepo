@@ -8,15 +8,10 @@
         "packages": [
             "apps/*",
             "libs/*"
-        ],
-        "nohoist": [
-            "**/@react-native-community/**",
-            "**/jetifier",
-            "**/react-native",
-            "**/react-native/**"
         ]
     },
     "scripts": {
+        "clean": "rm -rf apps/*/node_modules && rm -rf libs/*/node_modules && rm -rf node_modules && (watchman watch-del-all 2>/dev/null || echo 'watchman not installed, skipping')",
         "format": "prettier --write '**/*.{js,json,jsx,ts,tsx}'",
         "patch-package": "patch-package --patch-dir patches",
         "postinstall": "yarn patch-package"

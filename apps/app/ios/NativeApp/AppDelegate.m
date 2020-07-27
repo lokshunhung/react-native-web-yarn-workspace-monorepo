@@ -57,7 +57,7 @@ static void InitializeFlipper(UIApplication *application) {
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge {
 #ifdef FB_SONARKIT_ENABLED
   return
-      [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"
+      [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"apps/app/index"
                                                      fallbackResource:nil];
 #else
   return [[NSBundle mainBundle] URLForResource:@"main"

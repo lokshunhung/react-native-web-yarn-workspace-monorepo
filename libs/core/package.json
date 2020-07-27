@@ -3,12 +3,13 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {},
-    "dependencies": {
-        "react": "16.13.1",
-        "react-native": "0.63.2"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@types/react": "16.9.43",
         "@types/react-native": "0.63.2"
+    },
+    "peerDependencies": {
+        "react": "16.13.1",
+        "react-native": "0.63.2"
     }
 }
