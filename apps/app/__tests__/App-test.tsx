@@ -1,10 +1,12 @@
 import 'react-native';
-import React from 'react';
 import { App } from '@lsh/core/src/App';
-
+import React from 'react';
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
-it('renders correctly', () => {
-    renderer.create(<App />);
+describe('App', () => {
+    test('renders correctly', () => {
+        expect.assertions(0);
+        renderer.create(<App />);
+    });
 });

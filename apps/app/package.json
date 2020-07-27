@@ -8,7 +8,7 @@
         "start": "react-native start --reset-cache",
         "test": "jest",
         "format": "prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore '**/*.{js,json,js,ts,tsx}'",
-        "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+        "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path ../../.eslintignore ."
     },
     "dependencies": {
         "@lsh/core": "^0.0.1",
@@ -16,11 +16,15 @@
         "react-native": "0.63.2"
     },
     "devDependencies": {
-        "@react-native-community/eslint-config": "2.0.0",
         "@types/react-test-renderer": "16.9.2",
         "babel-jest": "26.1.0",
         "metro-react-native-babel-preset": "0.61.0",
         "react-test-renderer": "16.13.1"
+    },
+    "eslintConfig": {
+        "extends": [
+            "../../.eslintrc.js"
+        ]
     },
     "jest": {
         "preset": "react-native",
