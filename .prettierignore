@@ -9,3 +9,5 @@
 **/web_modules/
 
 **/tsconfig.json
+
+**/ios/Pods/*

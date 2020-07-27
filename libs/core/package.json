@@ -2,7 +2,9 @@
     "name": "@lsh/core",
     "version": "0.0.1",
     "private": true,
-    "scripts": {},
+    "scripts": {
+        "format": "prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore '**/*.{js,json,js,ts,tsx}'"
+    },
     "dependencies": {},
     "devDependencies": {},
     "peerDependencies": {

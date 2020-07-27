@@ -6,6 +6,7 @@
         "start": "react-app-rewired start",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
+        "format": "prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore '**/*.{js,json,js,ts,tsx}'",
         "eject": "react-scripts eject"
     },
     "dependencies": {

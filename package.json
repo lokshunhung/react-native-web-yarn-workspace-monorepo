@@ -17,7 +17,7 @@
         "app:ios": "yarn workspace @lsh/app run ios",
         "app:start": "yarn workspace @lsh/app run start",
         "web:start": "yarn workspace @lsh/web run start",
-        "format": "prettier --write '**/*.{js,json,jsx,ts,tsx}'",
+        "format": "yarn workspaces run format",
         "patch-package": "patch-package --patch-dir patches",
         "postinstall": "yarn patch-package"
     },
