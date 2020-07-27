@@ -18,6 +18,7 @@
         "app:start": "yarn workspace @lsh/app run start",
         "web:start": "yarn workspace @lsh/web run start",
         "format": "yarn workspaces run format",
+        "lint": "yarn workspaces run lint",
         "patch-package": "patch-package --patch-dir patches",
         "postinstall": "yarn patch-package"
     },
