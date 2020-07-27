@@ -11,7 +11,7 @@ const Title: () => ReactElement = Platform.select({
 export function Header(): ReactElement {
     return (
         <ImageBackground
-            accessibilityRole={'image'}
+            accessibilityRole="image"
             source={require('../assets/logo.png')}
             style={styles.background}
             imageStyle={styles.logo}

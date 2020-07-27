@@ -3,12 +3,16 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-        "format": "prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore '**/*.{js,json,js,ts,tsx}'"
+        "format": "prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore '**/*.{js,json,js,ts,tsx}'",
+        "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path ../../.eslintignore ."
     },
     "dependencies": {},
     "devDependencies": {},
     "peerDependencies": {
         "react": "16.13.1",
         "react-native": "0.63.2"
+    },
+    "eslintConfig": {
+        "extends": "../../.eslintrc.js"
     }
 }

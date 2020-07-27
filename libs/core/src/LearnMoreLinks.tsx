@@ -61,7 +61,7 @@ export function LearnMoreLinks(): ReactElement {
                     <React.Fragment key={id}>
                         <View style={styles.separator} />
                         <TouchableOpacity
-                            accessibilityRole={'button'}
+                            accessibilityRole="button"
                             onPress={() => console.info(link)}
                             style={styles.linkContainer}
                         >
