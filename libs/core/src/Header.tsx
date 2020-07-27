@@ -1,6 +1,12 @@
 import React, { ReactElement } from 'react';
-import { ImageBackground, StyleSheet, Text } from 'react-native';
+import { ImageBackground, Platform, StyleSheet, Text } from 'react-native';
 import { Colors } from './Colors';
+
+const Title: () => ReactElement = Platform.select({
+    ios: () => <Text>RN iOS</Text>,
+    android: () => <Text>RN Android</Text>,
+    default: () => <Text>RN Web</Text>,
+});
 
 export function Header(): ReactElement {
     return (
@@ -10,7 +16,9 @@ export function Header(): ReactElement {
             style={styles.background}
             imageStyle={styles.logo}
         >
-            <Text style={styles.text}>Welcome to React</Text>
+            <Text style={styles.text}>
+                <Title />
+            </Text>
         </ImageBackground>
     );
 }
