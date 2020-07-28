@@ -7,7 +7,6 @@ const config = {
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:react/recommended',
         'plugin:import/typescript',
         'prettier',
         'prettier/@typescript-eslint',
@@ -94,18 +93,33 @@ const config = {
         'object-shorthand': ['error'],
         'prefer-const': ['error'],
 
-        // react
-        'react/display-name': 'off',
+        // react - Make sure they do not conflict with 'prettier/react'
+        'react/display-name': 'off', // Too many false positives
         'react/jsx-boolean-value': ['error', 'never'],
         'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'ignore' }],
         'react/jsx-fragments': ['error', 'element'],
-        'react/jsx-no-useless-fragment': 'off',
+        'react/jsx-key': ['error'],
+        'react/jsx-no-comment-textnodes': ['error'],
+        'react/jsx-no-duplicate-props': ['error'],
+        'react/jsx-no-target-blank': ['error'],
+        'react/jsx-no-undef': ['error'],
+        'react/jsx-no-useless-fragment': ['error'],
+        'react/jsx-uses-react': ['error'],
+        'react/jsx-uses-vars': ['error'],
+        'react/no-children-prop': ['error'],
+        'react/no-danger-with-children': ['error'],
         // Disabled because of undesirable warnings, ref: https://github.com/facebook/create-react-app/issues/5204
-        'react/no-deprecated': 'off',
+        // 'react/no-deprecated': ['error'],
+        'react/no-direct-mutation-state': ['error'],
+        'react/no-find-dom-node': ['error'],
+        'react/no-is-mounted': ['error'],
+        'react/no-render-return-value': ['error'],
+        'react/no-string-refs': ['error'],
         'react/no-typos': ['error'],
-        'react/no-unescaped-entities': 'off',
-        'react/no-unknown-property': 'off',
-        'react/prop-types': 'off',
+        'react/no-unescaped-entities': 'off', // Too opiniated
+        'react/no-unknown-property': 'off', // Use TS for type-checking
+        'react/prop-types': 'off', // Use TS for type-checking
+        'react/react-in-jsx-scope': ['error'],
         'react/require-render-return': ['error'],
         'react/self-closing-comp': ['error', { component: true, html: true }],
 
